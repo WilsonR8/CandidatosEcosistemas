@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Semana 10</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+
+
+    <body>
+        <h1 id="title">LAPSUS NAPOLEÓN FRANCO</h1>
+
+        <div id="titlebtn">
+            <button id="seecan">Ver candidatos</button>
+            <button id="seevote">Ver votaciones</button>
+        </div>
+        
+
+
+        <div id="registerContainer">
+
+            <h3 id="subtitle">Regístre el cadidato para la encuesta</h3>
+
+            <input id="ident" placeholder="ID" type="text">
+
+            <input id="nombre" placeholder="Nombre" type="text">
+
+            <button id="registBtn"> Registrar</button>  
+        </div>
+
+        <div id="votebyid"> 
+
+            <h3>Vota por el candidato usando su ID</h3>
+
+            <input id="ident2" placeholder="ID" type="text">
+            <button id="votebtn">Votar</button>
+
+
+        </div>
+
+       
+
+
+    </body>
+
+
+
+
+
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyA4sWFzaHBcJbpgBGXLavtfK8Y4vi2Bpa8",
+      authDomain: "ecosistemas-81e39.firebaseapp.com",
+      databaseURL: "https://ecosistemas-81e39.firebaseio.com",
+      projectId: "ecosistemas-81e39",
+      storageBucket: "ecosistemas-81e39.appspot.com",
+      messagingSenderId: "363349207942",
+      appId: "1:363349207942:web:2576cbaad4a1b13d8c9a07",
+      measurementId: "G-8Z32DQFWB5"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+
+<script src="js/index.js"></script>
