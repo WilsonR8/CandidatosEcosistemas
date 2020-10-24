@@ -51,7 +51,15 @@ database.ref('users').on('value',function(data){
         console.log(valor.v);
         if(valor.ident==ii){
             valor.v++;
-            //aqui deberia esta el push
+           
+            /*aqui deberia esta el push, profe realmente no se como hacer para que 
+            Firebase guerde el cambio en el voto, en consola funciona pero como toma
+            el valor que hay en fire base por eso no cambia de 1 voto, se que debe
+            ser un error re tonto pero no se que seria y el tiempo esta en mi contra.
+
+            Aun asi, estuve muy cerca de lograrlo... pero no todo pueden ser goles.
+            */
+           
         alert("aaaaaaaaa");
             console.log(valor.v);
         }
