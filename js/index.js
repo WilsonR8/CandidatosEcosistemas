@@ -1,6 +1,7 @@
 const ident = document.getElementById('ident');
 const nombre = document.getElementById('nombre');
 const ident2 = document.getElementById('ident2');
+const seecan= document.getElementById('seecan');
 
 const database=firebase.database();
 
@@ -46,9 +47,13 @@ database.ref('users').on('value',function(data){
         function(user){
         let valor=user.val();
         console.log(valor.ident);
+        console.log(ii);
+        console.log(valor.v);
         if(valor.ident==ii){
+            valor.v++;
+            //aqui deberia esta el push
         alert("aaaaaaaaa");
-            console.log("aaaa");
+            console.log(valor.v);
         }
         }
     );
@@ -60,11 +65,31 @@ database.ref('users').on('value',function(data){
  console.log("ss");
 }
  
-
-
-
-
-
+alluser=()=>{
+    json = JSON.stringify(showarray)
+    alert(json);
+}
 
 registBtn.addEventListener('click',registrar);
 votebtn.addEventListener('click',vote);
+seecan.addEventListener('click',alluser);
+
+
+database.ref('users').on('value',function(data){
+    var arryuser=[];
+    data.forEach(
+        function(user){
+        arryuser.push(user.val().nombre);
+        showarray=arryuser;
+
+        }
+    );
+   
+});
+
+
+
+
+
+
+
